@@ -59,6 +59,9 @@ app.use('/api/announcements', require('./routes/announcementRoutes'));
 app.use('/api/shifts',        require('./routes/shiftRoutes'));
 app.use('/api/templates',     require('./routes/templateRoutes'));
 app.use('/api/spa-bookings',  require('./routes/spaBookingRoutes'));
+app.use('/api/menu',          require('./routes/menuItemRoutes'));
+app.use('/api/promo-codes',   require('./routes/promoCodeRoutes'));
+app.use('/api/housekeeping-tasks', require('./routes/housekeepingTaskRoutes'));
 
 app.use(notFound);
 app.use(errorHandler);

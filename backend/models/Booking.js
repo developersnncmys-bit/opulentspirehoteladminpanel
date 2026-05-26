@@ -10,9 +10,9 @@ const bookingSchema = new mongoose.Schema(
     room:     { type: String, required: true, trim: true },
     checkIn:  { type: Date,   required: true },
     checkOut: { type: Date,   required: true },
-    source:   { type: String, enum: ['Direct', 'MakeMyTrip', 'Booking', 'Agoda', 'Goibibo', 'Corporate'], default: 'Direct' },
+    source:   { type: String, enum: ['Direct', 'MakeMyTrip', 'Booking', 'Agoda', 'Goibibo', 'Corporate', 'Walk-in'], default: 'Direct' },
     amount:   { type: Number, default: 0, min: 0 },
-    status:   { type: String, enum: ['Confirmed', 'Hold', 'Cancelled'], default: 'Confirmed' },
+    status:   { type: String, enum: ['Confirmed', 'Hold', 'Cancelled', 'Checked-in', 'Checked-out'], default: 'Confirmed' },
     notes:    { type: String, trim: true },
   },
   { timestamps: true }
